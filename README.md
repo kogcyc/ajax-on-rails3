@@ -53,7 +53,7 @@ end
 
 Note that this is a fairly standard Rails 3 controller method
 
-The respond_to block has two paths: HTML and JS
+The <b>respond_to</b> block has two paths: <b>HTML</b> and <b>JS</b>
 
 	HTML 
 	
