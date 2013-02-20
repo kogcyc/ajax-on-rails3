@@ -84,7 +84,7 @@ This file also contains a div with the id <b>content</b> that will be target of 
 which will be run once the controller finishes
 
 Notice too that this link_to includes a parameter called <b>:to_controller</b>
-- any parameters not named with a reserved word will end up in the params hash at the controller<br>
+- any parameters not named with a reserved word will end up in the <b>params</b> hash at the controller<br>
 - this is standard Rails/jQuery/AJAX stuff<br>
 
 ```ruby
