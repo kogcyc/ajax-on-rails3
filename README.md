@@ -24,9 +24,11 @@ $ cd ajaxexample
 $ rails g controller ajax
 ```
 
-####3) Add a method named <i>example</i> to /app/controllers/ajax_controller.rb
+####3) ajax_controller.rb
 
-Note that this is a fairly standard Rails 3 controller method.
+Add a method named <i>example</i> to ajax_controller.rb
+
+Note that this is a fairly standard Rails 3 controller method
 
 When called without an extension it will render the file:
 
@@ -36,8 +38,8 @@ When called with a .js extension (http://host/example.js), it will 'render':
 
 <i>example.js.erb</i>
 
-And that's the first secret to how AJAX works: an AJAX call will add .js
-to the name of the controller and the controller will then respond_to the
+And that's the first secret to how AJAX works: an AJAX call will add .js<br>
+to the name of the controller and the controller will then respond_to the<br>
 format.js by rendering <i>example.js.erb</i>
 
 ```ruby
