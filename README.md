@@ -60,7 +60,9 @@ The <b>respond_to</b> block has two paths: <b>html</b> and <b>js</b>:
 	When you browse <b><host>/example</b>, it renders the matching HTML file:
 	
 		example.html.erb
-<>
+		
+<br>
+	
 	JS 
 	
 	When you call into the example method using AJAX, it will use the matching JS file:
