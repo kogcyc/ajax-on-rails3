@@ -24,8 +24,29 @@ $ cd ajaxexample
 $ rails g controller ajax
 ```
 
+####3) Add a method named <i><b> example </b></i> to /app/controllers/ajax_controller.rb
+
+```ruby
+class AjaxController < ApplicationController
+
+	def example
+
+	    @from_controller = params[:to_controller]
+
+	    respond_to do |format|
+	      format.html
+	      format.js
+	    end
+
+	end
+
+end
+```
+
 
 ####6) routes.rb
+
+Add this route:
 
 ```ruby
 get "/example" => "ajax#example"
