@@ -57,7 +57,7 @@ The <b>respond_to</b> block has two paths: <b>html</b> and <b>js</b>:
 
 	HTML 
 	
-	When you browse <b><host>/example</b>, it renders the matching HTML file:
+	When you browse http://host/example, it renders the matching HTML file:
 	
 		example.html.erb
 		
