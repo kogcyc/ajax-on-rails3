@@ -114,6 +114,6 @@ rails s
 
 And then browse:
 
-   localhost:3000/example
+    localhost:3000/example
 
 Hope this helps
