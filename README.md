@@ -1,11 +1,15 @@
-How To Use AJAX Rails 3
+How To Use AJAX Inside Rails 3
 ==============
 
-This is a minimal example of how to use AJAX via jQuery on Rails 3(.2.11).
+This is a minimal example of how to use AJAX on Rails 3(.2.11) with the help of jQuery
 
-Before we start, please not that jQuery <b>did not</b> have to be installed or configured in Rails 3.2.11
+####0) No Setup Required
 
-####1) First, here is the environment used for this example:
+Note that Rails 3.2.11 comes with jQuery installed and configured: just start using it
+
+####1) Environment
+
+Here is the environment used for this example:
 
 ```bash
 $ uname -a
@@ -16,7 +20,7 @@ $ rails -v
 Rails 3.2.11
 ```
 
-####2) Next, create an app and a controller
+####2) To start, create an app and a controller
 
 ```bash
 $ rails new ajaxexample
@@ -28,21 +32,7 @@ $ rails g controller ajax
 
 ####3) ajax_controller.rb
 
-Add a method named <i>example</i> to ajax_controller.rb
-
-Note that this is a fairly standard Rails 3 controller method
-
-When called without an extension it will render the file:
-
-<i>example.html.erb</i>
-
-When called with a .js extension (http://host/example.js), it will 'render':
-
-<i>example.js.erb</i>
-
-And that's the first secret to how AJAX works: an AJAX call will add .js<br>
-to the name of the controller and the controller will then respond_to the<br>
-format.js by rendering <i>example.js.erb</i>
+Add a method named <i>example</i> to ajax_controller.rb:
 
 ```ruby
 class AjaxController < ApplicationController
@@ -61,17 +51,35 @@ class AjaxController < ApplicationController
 end
 ```
 
+Note that this is a fairly standard Rails 3 controller method
+
+The respond_to block has two paths: HTML and JS
+
+<b>HTML:</b> When you browser <b><host>/example</b>, it render the matching HTML file:
+
+<b>example.html.erb</b>
+
+<b>JS:</b> When you call into the example method using AJAX, it will use this JS file:
+
+<b>example.js.erb</b> 
+
+as the AJAX <b>callback</b>
+
+That's largely how it works
+
+So let's look at those two files...
+
 ####4) example.html.erb
 
-The next trick is this: all you have to do to create an AJAX call is to add
-<i><b>:remote => true</b></i> to any form, link, button or other call to the controller
+Rails makes calling AJAX easy: all you have to do to create an AJAX call is to add
+<b>:remote => true</b> to any form, link, button or other call to the controller
 
-This page also contains a div that will be target of the AJAX callback 
+This file also contains a div with the id <b>content</b< that will be target of the AJAX callback 
 which will be run once the controller finishes
 
-And notice too that this link_to includes a parameter called :to_controller<br>
-- any parameters like this will end up in the params hash back at the controller<br>
-- this is standard Rails stuff and standard jQuery/AJAX stuff as well
+Notice too that this link_to includes a parameter called <b>:to_controller</b><br>
+- any parameters not named with a reserved word will end up in the params hash at the controller<br>
+- this is standard Rails stuff and standard jQuery/AJAX stuff as well<br>
 
 ```ruby
 <div id='content'></div>
@@ -84,6 +92,8 @@ And notice too that this link_to includes a parameter called :to_controller<br>
 This is the callback
 
 Rails does nothing special here and it offers no helpers
+
+The only help that Rails offers here is to expose 
 
 You have to do it all yourself
 
