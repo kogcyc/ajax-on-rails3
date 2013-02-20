@@ -101,3 +101,7 @@ Add this route:
 ```ruby
 get "/example" => "ajax#example"
 ```
+
+That's all there is to it
+
+Hope this helps
