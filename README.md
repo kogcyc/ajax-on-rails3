@@ -61,7 +61,7 @@ The <b>respond_to</b> block has two paths: <b>html</b> and <b>js</b>:
 	
 		example.html.erb
 		
-<br>
+<noop>
 	
 	JS 
 	
