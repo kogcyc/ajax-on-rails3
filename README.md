@@ -99,12 +99,11 @@ This is the callback
 
 Rails does nothing special here and it offers no helpers
 
-The only help that Rails offers here is to expose 
+The only help that Rails offers here is make instance variables (in this example <b>:from_controller</b>) 
+available to jQuery in much the same way
+that they are made available to you in .html.erb files
 
-You have to do it all yourself
-
-But it follows the jQuery pattern and ERB pattern so you will likely<br>
-have no trouble understanding how to use it
+Standard usage patterns, no surprises
 
 ```ruby
 $('#content').html("<%= escape_javascript( @from_controller) %>");
