@@ -55,19 +55,19 @@ Note that this is a fairly standard Rails 3 controller method
 
 The respond_to block has two paths: HTML and JS
 
-	<b>HTML</b> 
+	HTML 
 	
 	When you browse <b><host>/example</b>, it renders the matching HTML file:
 	
-	<b>example.html.erb</b>
+	example.html.erb
 
-+
+.
 
-	<b>JS</b> 
+	JS 
 	
 	When you call into the example method using AJAX, it will use the matching JS file:
 	
-	<b>example.js.erb</b> 
+	example.js.erb 
 	
 	as the AJAX <b>callback</b>
 
