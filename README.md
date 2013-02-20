@@ -13,7 +13,7 @@ Here is the environment used for this example:
 
 ```bash
 $ uname -a
-Linux n5040 3.5.0-23-generic #35-Ubuntu SMP Thu Jan 24 13:05:29 UTC 2013 i686 i686 i686 GNU/Linux
+Linux 3.5.0-23-generic #35-Ubuntu SMP Thu Jan 24 13:05:29 UTC 2013 i686 i686 i686 GNU/Linux
 $ ruby -v
 ruby 1.9.3p385 (2013-02-06 revision 39114) [i686-linux]
 $ rails -v
