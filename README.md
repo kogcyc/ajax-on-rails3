@@ -55,7 +55,7 @@ Note that this is a fairly standard Rails 3 controller method
 
 The <b>respond_to</b> block has two paths: <b>html</b> and <b>js</b>:
 
-	HTML 
+	HTML
 	
 	When you browse http://host/example, it renders the matching HTML file:
 	
