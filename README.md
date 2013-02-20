@@ -67,6 +67,10 @@ The next trick is this: all you have to do to create an AJAX call is to add
 This page also contains a div that will be target of the AJAX callback 
 which will be run once the controller finishes
 
+And notice too that this link_to includes a parameter called :to_controller<br>
+- any parameters like this will end up in the params hash back at the controller<br>
+- this is standard Rails stuff and standard jQuery/AJAX stuff as well
+
 ```ruby
 <div id='content'></div>
 
