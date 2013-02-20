@@ -102,6 +102,18 @@ Add this route:
 get "/example" => "ajax#example"
 ```
 
+####7) Finally
+
 That's all there is to it
+
+Start the server locally:
+
+```bash
+rails s
+```
+
+And then browse:
+
+   localhost:3000/example
 
 Hope this helps
