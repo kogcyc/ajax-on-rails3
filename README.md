@@ -32,7 +32,7 @@ $ rails g controller ajax
 
 ####3) ajax_controller.rb
 
-Add a method named <i>example</i> to ajax_controller.rb:
+Add a method named <b>example</b> to ajax_controller.rb:
 
 ```ruby
 class AjaxController < ApplicationController
