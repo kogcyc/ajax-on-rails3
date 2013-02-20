@@ -83,9 +83,9 @@ Rails makes calling AJAX easy: all you have to do to create an AJAX call is to a
 This file also contains a div with the id <b>content</b> that will be target of the AJAX callback 
 which will be run once the controller finishes
 
-Notice too that this link_to includes a parameter called <b>:to_controller</b><br>
+Notice too that this link_to includes a parameter called <b>:to_controller</b>
 - any parameters not named with a reserved word will end up in the params hash at the controller<br>
-- this is standard Rails stuff and standard jQuery/AJAX stuff as well<br>
+- this is standard Rails/jQuery/AJAX stuff<br>
 
 ```ruby
 <div id='content'></div>
