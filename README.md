@@ -59,7 +59,7 @@ The respond_to block has two paths: HTML and JS
 	
 	When you browse <b><host>/example</b>, it renders the matching HTML file:
 	
-	example.html.erb
+		example.html.erb
 
 .
 
@@ -67,9 +67,9 @@ The respond_to block has two paths: HTML and JS
 	
 	When you call into the example method using AJAX, it will use the matching JS file:
 	
-	example.js.erb 
+		example.js.erb 
 	
-	as the AJAX <b>callback</b>
+	as the AJAX callback
 
 That's largely how it works
 
