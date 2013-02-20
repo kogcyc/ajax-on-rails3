@@ -87,7 +87,7 @@ Notice too that this link_to includes a parameter called <b>:to_controller</b>
 - any parameters not named with a reserved word will end up in the <b>params</b> hash at the controller<br>
 - this is standard Rails/jQuery/AJAX stuff<br>
 
-```ruby
+```html
 <div id='content'></div>
 
 <%= link_to 'Go, Ajax, Go!', :action => 'example', :remote => true, :to_controller => 'Bazinga!' %> 
@@ -105,7 +105,7 @@ that they are made available to you in .html.erb files
 
 Standard usage patterns, no surprises
 
-```ruby
+```javascript
 $('#content').html("<%= escape_javascript( @from_controller) %>");
 ```
 
