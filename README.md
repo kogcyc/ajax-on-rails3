@@ -3,7 +3,9 @@ How To Use AJAX Rails 3
 
 This is a minimal example of how to use AJAX via jQuery on Rails 3(.2.11).
 
-####1) First off, here is the environment used for this example:
+Before we start, please not that jQuery <b>did not</b> have to be installed or configured in Rails 3.2.11
+
+####1) First, here is the environment used for this example:
 
 ```bash
 $ uname -a
@@ -75,6 +77,21 @@ And notice too that this link_to includes a parameter called :to_controller<br>
 <div id='content'></div>
 
 <%= link_to 'Go, Ajax, Go!', :action => 'example', :remote => true, :to_controller => 'Bazinga!' %> 
+```
+
+####5) example.js.erb
+
+This is the callback
+
+Rails does nothing special here and it offers no helpers
+
+You have to do it all yourself
+
+But it follows the jQuery pattern and ERB pattern so you will likely<br>
+have no trouble understanding how to use it
+
+```ruby
+$('#content').html("<%= escape_javascript( @from_controller) %>");
 ```
 
 ####6) routes.rb
