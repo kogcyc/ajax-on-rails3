@@ -80,7 +80,7 @@ So let's look at those two files...
 Rails makes calling AJAX easy: all you have to do to create an AJAX call is to add
 <b>:remote => true</b> to any form, link, button or other call to the controller
 
-This file also contains a div with the id <b>content</b< that will be target of the AJAX callback 
+This file also contains a div with the id <b>content</b> that will be target of the AJAX callback 
 which will be run once the controller finishes
 
 Notice too that this link_to includes a parameter called <b>:to_controller</b><br>
