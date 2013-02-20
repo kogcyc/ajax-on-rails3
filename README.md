@@ -99,7 +99,7 @@ This is the callback
 
 Rails does nothing special here and it offers no helpers
 
-The only help that Rails offers here is make instance variables (in this example <b>:from_controller</b>) 
+The only help that Rails offers here is make instance variables (in this example <b>@from_controller</b>) 
 available to jQuery in much the same way
 that they are made available to you in .html.erb files
 
