@@ -24,7 +24,21 @@ $ cd ajaxexample
 $ rails g controller ajax
 ```
 
-####3) Add a method named <i><b> example </b></i> to /app/controllers/ajax_controller.rb
+####3) Add a method named <i>example</i> to /app/controllers/ajax_controller.rb
+
+Note that this is a fairly standard Rails 3 controller method.
+
+When called without an extension it will render the file:
+
+<i>example.html.erb</i>
+
+When called with a .js extension (http://host/example.js), it will 'render':
+
+<i>example.js.erb</i>
+
+And that's the first secret to how AJAX works: an AJAX call will add .js
+to the name of the controller and the controller will then respond_to the
+format.js by rendering <i>example.js.erb</i>
 
 ```ruby
 class AjaxController < ApplicationController
@@ -43,6 +57,19 @@ class AjaxController < ApplicationController
 end
 ```
 
+####4) example.html.erb
+
+The next trick is this: all you have to do to create an AJAX call is to add
+<i><b>:remote => true</b></i> to any form, link, button or other call to the controller
+
+This page also contains a div that will be target of the AJAX callback 
+which will be run once the controller finishes
+
+```ruby
+<div id='content'></div>
+
+<%= link_to 'Go, Ajax, Go!', :action => 'example', :remote => true, :to_controller => 'Bazinga!' %> 
+```
 
 ####6) routes.rb
 
